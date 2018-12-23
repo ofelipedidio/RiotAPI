@@ -16,7 +16,8 @@ const {
 
 const {
   REGION,
-  RESPONSE_ERRORS
+  RESPONSE_ERRORS,
+  SEASON,
 } = require('./libs/gameConstants');
 
 function RiotAPI(api_key, options = {}) {
@@ -30,6 +31,7 @@ function RiotAPI(api_key, options = {}) {
 
 RiotAPI.REGION = REGION;
 RiotAPI.RESPONSE_ERRORS = RESPONSE_ERRORS;
+RiotAPI.SEASONS = SEASONS;
 
 RiotAPI.prototype._request = function (path, options = {}) {
   return new Promise((resolve, reject) => {

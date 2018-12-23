@@ -27,6 +27,7 @@ const REGION = {
   public_beta_environment: 'pbe1',
 };
 
+// Incomplete
 const QUEUE = {
   custom_game: 0,
   snowdown_showdown_1v1: 72,
@@ -65,14 +66,6 @@ const QUEUE = {
   doom_bots_standard: 960,
   star_guardian_normal: 980,
   star_guardian_onslaught: 990,
-  a: 1000,
-  a: 0,
-  a: 0,
-  a: 0,
-  a: 0,
-  a: 0,
-  a: 0,
-  a: 0,
 };
 
 const SEASON = {
@@ -92,5 +85,6 @@ const SEASON = {
 
 module.exports = {
   RESPONSE_ERRORS,
-  REGION
+  REGION,
+  SEASON,
 };

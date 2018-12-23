@@ -1,0 +1,25 @@
+{
+  "name": "riotapi-int",
+  "version": "1.0.0",
+  "description": "NodeJS integration for RiotAPI",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofelipedidio/RiotAPI.git"
+  },
+  "keywords": [
+    "riot",
+    "api",
+    "riotapi",
+    "league",
+    "of",
+    "legends"
+  ],
+  "author": "ofelipedidio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ofelipedidio/RiotAPI/issues"
+  },
+  "homepage": "https://github.com/ofelipedidio/RiotAPI#readme"
+}
