@@ -31,7 +31,7 @@ function RiotAPI(api_key, options = {}) {
 
 RiotAPI.REGION = REGION;
 RiotAPI.RESPONSE_ERRORS = RESPONSE_ERRORS;
-RiotAPI.SEASONS = SEASONS;
+RiotAPI.SEASON = SEASON;
 
 RiotAPI.prototype._request = function (path, options = {}) {
   return new Promise((resolve, reject) => {
