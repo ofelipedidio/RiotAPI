@@ -5,7 +5,7 @@
 ```javascript
 const RiotAPI = require("riotapi-int");
 
-const api = new RiotAPI("api-key-here", { region: RiotAPI.korea });
+const api = new RiotAPI("api-key-here", { region: RiotAPI.REGION.korea });
 
 api.getSummonerV4ByName("Hide on bush")
   .then(summoner => console.log(summoner))

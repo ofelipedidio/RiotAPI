@@ -1,6 +1,6 @@
 {
   "name": "riotapi-int",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "NodeJS integration for RiotAPI",
   "main": "index.js",
   "scripts": {},
