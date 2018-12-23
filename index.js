@@ -104,7 +104,7 @@ RiotAPI.prototype.getChamptionMasteryV4ScoreBySummonerId = function (id, options
 // ==================
 // =    Match V4    =
 // ==================
-RiotAPI.prototype.getMatchV4ByMatchId = function (id, options) {
+RiotAPI.prototype.getMatchV4ByMatchId = function (id, options = {}) {
   return this._request(
     format("/lol/match/v4/matches/{matchId}", {
       matchId: id
@@ -113,7 +113,7 @@ RiotAPI.prototype.getMatchV4ByMatchId = function (id, options) {
   ).then(match => MatchV4.fromJSON(match));
 };
 
-RiotAPI.prototype.getMatchListV4ByAccountId = function (id, options) {
+RiotAPI.prototype.getMatchListV4ByAccountId = function (id, options = {}) {
   options.query = options.query || {};
 
   if (options.champion) options.query.champion = options.champion;
@@ -129,7 +129,7 @@ RiotAPI.prototype.getMatchListV4ByAccountId = function (id, options) {
   ).then(match => MatchListV4.fromJSON(match));
 };
 
-RiotAPI.prototype.getMatchTimelineV4ByMatchId = function (id, options) {
+RiotAPI.prototype.getMatchTimelineV4ByMatchId = function (id, options = {}) {
   return this._request(
     format("/lol/match/v4/timelines/by-match/{matchId}", {
       matchId: id
@@ -138,7 +138,7 @@ RiotAPI.prototype.getMatchTimelineV4ByMatchId = function (id, options) {
   ).then(match => MatchTimelineV4.fromJSON(match));
 };
 
-RiotAPI.prototype.getMatchIdsByTournamentCode = function (code, options) {
+RiotAPI.prototype.getMatchIdsByTournamentCode = function (code, options = {}) {
   return this._request(
     format("/lol/match/v4/matches/by-tournament-code/{tournamentCode}/ids", {
       tournamentCode: code
@@ -147,7 +147,7 @@ RiotAPI.prototype.getMatchIdsByTournamentCode = function (code, options) {
   );
 };
 
-RiotAPI.prototype.getMatchV4ByTournamentCodeAndMatchId = function (code, id, options) {
+RiotAPI.prototype.getMatchV4ByTournamentCodeAndMatchId = function (code, id, options = {}) {
   return this._request(
     format("/lol/match/v4/matches/{matchId}/by-tournament-code/{tournamentCode}", {
       matchId: id,
@@ -160,7 +160,7 @@ RiotAPI.prototype.getMatchV4ByTournamentCodeAndMatchId = function (code, id, opt
 // =====================
 // =    Summoner V4    =
 // =====================
-RiotAPI.prototype.getSummonerV4ByAccountId = function (id, options) {
+RiotAPI.prototype.getSummonerV4ByAccountId = function (id, options = {}) {
   return this._request(
     format("/lol/summoner/v4/summoners/by-account/{encryptedAccountId}", {
       encryptedAccountId: id
@@ -169,7 +169,7 @@ RiotAPI.prototype.getSummonerV4ByAccountId = function (id, options) {
   ).then(res => SummonerV4.fromJSON(res));
 };
 
-RiotAPI.prototype.getSummonerV4ByName = function (name, options) {
+RiotAPI.prototype.getSummonerV4ByName = function (name, options = {}) {
   return this._request(
     format("/lol/summoner/v4/summoners/by-name/{summonerName}", {
       summonerName: name
@@ -178,7 +178,7 @@ RiotAPI.prototype.getSummonerV4ByName = function (name, options) {
   ).then(champ => SummonerV4.fromJSON(champ));
 };
 
-RiotAPI.prototype.getSummonerV4ByPUUID = function (puuid, options) {
+RiotAPI.prototype.getSummonerV4ByPUUID = function (puuid, options = {}) {
   return this._request(
     format("/lol/summoner/v4/summoners/by-puuid/{encryptedPUUID}", {
       encryptedPUUID: puuid
@@ -187,7 +187,7 @@ RiotAPI.prototype.getSummonerV4ByPUUID = function (puuid, options) {
   ).then(champ => SummonerV4.fromJSON(champ));
 };
 
-RiotAPI.prototype.getSummonerV4BySummonerId = function (id, options) {
+RiotAPI.prototype.getSummonerV4BySummonerId = function (id, options = {}) {
   return this._request(
     format("/lol/summoner/v4/summoners/{encryptedSummonerId}", {
       encryptedSummonerId: id
