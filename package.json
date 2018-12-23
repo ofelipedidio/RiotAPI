@@ -1,9 +1,11 @@
 {
   "name": "riotapi-int",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "NodeJS integration for RiotAPI",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "node test.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ofelipedidio/RiotAPI.git"
