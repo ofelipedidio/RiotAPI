@@ -3,18 +3,19 @@
 ## Simple example
 
 ```javascript
-const RiotAPI = require("riotapi");
+const RiotAPI = require('riotapi');
 
-const api = new RiotAPI("api-key-here", { region: RiotAPI.REGION.korea });
+const api = new RiotAPI('api-key-here', { region: RiotAPI.REGION.korea });
 
-api.getSummonerV4ByName("Hide on bush")
+api
+  .getSummonerV4ByName('Hide on bush')
   .then(console.log)
   .catch(console.error);
 ```
 
 ## Documentation
 
-*WORK ON PROGRESS*
+_WORK IN PROGRESS_
 
 ### Champion Mastery V4
 
@@ -31,21 +32,22 @@ api.getChamptionMasteryListV4BySummonerId(id, (data, error) => {
 
 Returns **ChampionMasteryV4**
 
-
 ```javascript
-api.getChamptionMasteryV4BySummonerIdByChampionId(summonerId, championId, (data, error) => {
+api.getChamptionMasteryV4BySummonerIdByChampionId(
+  summonerId,
+  championId,
+  (data, error) => {
     if (error) {
-    // Handle error ...
+      // Handle error ...
       return;
     }
 
-  // handler response ...
+    // handler response ...
   }
 );
 ```
 
 Returns **ChampionMasteryV4**
-
 
 ```javascript
 api.getChamptionMasteryV4ScoreBySummonerId(id, (data, error) => {
