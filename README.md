@@ -3,21 +3,18 @@
 ## Simple example
 
 ```javascript
-const RiotAPI = require("riotapi-int");
+const RiotAPI = require("riotapi");
 
 const api = new RiotAPI("api-key-here", { region: RiotAPI.REGION.korea });
 
-api.getSummonerV4ByName("Hide on bush", (data, error) => {
-  if (error) {
-    // Handle error ...
-    return;
-  }
-
-  // handler response ...
-});
+api.getSummonerV4ByName("Hide on bush")
+  .then(console.log)
+  .catch(console.error);
 ```
 
 ## Documentation
+
+*WORK ON PROGRESS*
 
 ### Champion Mastery V4
 

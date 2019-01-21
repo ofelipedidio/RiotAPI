@@ -1,10 +1,10 @@
 {
-  "name": "riotapi-int",
-  "version": "1.0.5",
-  "description": "NodeJS integration for RiotAPI",
+  "name": "riotapi",
+  "version": "2.0.0",
+  "description": "This is an open source League of Legends RiotAPI Library.",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test/test.js"
   },
   "repository": {
     "type": "git",
